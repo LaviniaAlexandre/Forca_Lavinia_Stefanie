@@ -59,16 +59,16 @@ public class TelaJogo extends AppCompatActivity implements View.OnClickListener 
         listaImagens.add(R.drawable.forca_11_9);
 
         listaPalavras =  new ArrayList<String>();
-        listaPalavras.add("CAIXA");
-        listaPalavras.add("BOLA");
-        listaPalavras.add("TOMATE");
-        listaPalavras.add("ABACAXI");
-        listaPalavras.add("CARRETA");
-        listaPalavras.add("ELEFANTE");
+        listaPalavras.add("DOCE");
+        listaPalavras.add("BOLO");
+        listaPalavras.add("MORANGO");
+        listaPalavras.add("CHOCOLATE");
+        listaPalavras.add("CABELO");
+        listaPalavras.add("CACHORRO");
         listaPalavras.add("MACACO");
         listaPalavras.add("MELANCIA");
-        listaPalavras.add("ASFALTO");
-        listaPalavras.add("FORMULA");
+        listaPalavras.add("GATO");
+        listaPalavras.add("RATO");
         listaPalavras.add("TREMEMBE");
         listaPalavras.add("ESCOLA");
         listaPalavras.add("UNIVERSIDADE");
