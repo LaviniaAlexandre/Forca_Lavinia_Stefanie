@@ -20,7 +20,9 @@ public class BD extends SQLiteOpenHelper {
                 "CREATE TABLE IF NOT EXISTS tabelaPalavra("+
                         "_id INTEGER PRIMARY KEY AUTOINCREMENT,"+
                         "palavra TEXT, "+
-                        "categoria TEXT )"
+                        "categoria TEXT,"+
+                        "dica TEXT, " +
+                        "nivel TEXT)"
         );
 
     }
@@ -29,6 +31,8 @@ public class BD extends SQLiteOpenHelper {
         ContentValues valores = new ContentValues();
         valores.put("palavra", p.getPalavraDigitada());
         valores.put("categoria", p.getCategoria());
+        valores.put("dica", p.getDica());
+        valores.put("nivel", p.getNivel());
         db.insert("tabelaPalavra", null, valores);
     }
     public ArrayList<Palavra> listarPalavras (){
@@ -38,9 +42,13 @@ public class BD extends SQLiteOpenHelper {
         while(cursor.moveToNext()){
             String palavra = cursor.getString(cursor.getColumnIndexOrThrow("palavra"));
             String categoria = cursor.getString(cursor.getColumnIndexOrThrow("categoria"));
+            String dica = cursor.getString(cursor.getColumnIndexOrThrow("dica"));
+            String nivel = cursor.getString(cursor.getColumnIndexOrThrow("nivel"));
             Palavra p = new Palavra();
             p.setPalavraDigitada(palavra);
             p.setCategoria(categoria);
+            p.setDica(dica);
+            p.setNivel(nivel);
             lista.add(p);
         }
         cursor.close();

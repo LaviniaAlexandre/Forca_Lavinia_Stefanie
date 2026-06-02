@@ -106,6 +106,7 @@
                 android:text="Alimentos"
                 android:textColor="#0B0A0A"
                 android:textSize="20sp" />
+
         </RadioGroup>
 
     </LinearLayout>

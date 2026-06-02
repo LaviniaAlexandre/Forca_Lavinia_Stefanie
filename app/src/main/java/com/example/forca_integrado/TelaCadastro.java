@@ -51,6 +51,17 @@ public class TelaCadastro extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if(view == btnCadastrar) {
             String texto = textoDaPalavra.getText().toString();
+            int conta =texto.length();
+            String nivel;
+            if (conta <= 4){
+                     nivel = "FACIL";
+             }
+            if (conta <= 7){
+                nivel = "MÉDIO";
+            }
+            else {
+                nivel = "DIFÍCIL";
+            }
 
             // Vamos testar a caixa de texto para ver se tem conteúdos
             boolean TemTextoDigitado = false;
@@ -70,7 +81,7 @@ public class TelaCadastro extends AppCompatActivity implements View.OnClickListe
             if (r.isChecked() || r1.isChecked() || r2.isChecked() || r3.isChecked() || r4.isChecked()) {
                 temRadioChecado = true;
             } else {
-                Toast.makeText(this, "Falou marcar categoria!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Faltou marcar categoria!", Toast.LENGTH_SHORT).show();
             }
             if (TemTextoDigitado && temRadioChecado){
                 //aqui pode salvar no BD
